@@ -71,39 +71,41 @@ class App extends Component {
   render() {
     console.log( this.state.loading)
       const firstName = this.state.nameFirst
+      const firstNameEndsWithS = firstName.slice(-1) === 's' ? '' : 's'
       const todoList = this.state.todos.map(item => <ToDoItem key={item.id} item={item} handleChange = {this.handleChange}/>)
       console.log(typeof firstName)
       return (
-      <div className="app center">
+      <div className="App center">{ this.state.loading ? 
+            <div className="lds-hourglass"></div> :
         <ul>
-          <li className="user-card">{ this.state.loading ? 
-            <div className="lds-hourglass"></div> : 
-            <div > 
-              <img src={this.state.image.large} alt={this.state.nameFirst + ' ' +this.state.nameLast} /><br/> 
-              <div className="bold-plus">{this.state.nameFirst} {this.state.nameLast}</div><span className="italisized">{this.state.login.username}</span>
+          <li className="user-card"> 
+            <div className="user-card-inner"> 
+              <img src={this.state.image.large} alt={this.state.nameFirst + ' ' +this.state.nameLast} />  
+              <div className="bold-plus center-text">{this.state.nameFirst} {this.state.nameLast}</div>
+              <div className="italisized center-text">{this.state.login.username}</div>    
             </div> 
-            }
         </li>
-        <li>
-          <h3>ToDoList</h3>
+        <li className="todo-list">
+          <h3>{this.state.nameFirst + firstNameEndsWithS} att göra lista</h3>
+          <div className="todo-list-inner"> 
           <ul>
-          <li>
-            <form>
-              <input 
-                type="text" 
-                value={this.state.dodo} 
-                name="dodo" 
-                placeholder="Skriv här" 
-                onChange={this.handleForm} 
-               />
-            </form>
-          </li>
-          {this.state.dodo &&  <button onClick={() => this.addTodo(this.state.dodo)}>ButTon</button> }
-          
+            <li>
+              <form>
+                <input 
+                  type="text" 
+                  value={this.state.dodo} 
+                  name="dodo" 
+                  placeholder="Skriv något här..." 
+                  onChange={this.handleForm} 
+                 /><br/>
+              </form>
+            </li>
+          {this.state.dodo &&  <button className="todo-button" onClick={() => this.addTodo(this.state.dodo)}>Lägg till...</button> }
           {todoList}
           </ul>
+          </div>
         </li>
-      </ul>
+      </ul>}
     </div>
     );
   }
