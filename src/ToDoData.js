@@ -11,7 +11,7 @@ const ToDoData =[
   },
     {
     "id": 3,
-    "txt": "Mata katten Lars",
+    "txt": "Mata Lars (katten alltså)",
     "done": false
   },
     {

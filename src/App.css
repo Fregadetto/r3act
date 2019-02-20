@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Oswald|Schoolbell');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Montserrat|Schoolbell');
 .App {
   max-width: 400px; 
 }
 
 .user-card{
   font-family: 'Schoolbell';
-  background-color: #C9D3DF;
-  border: 3px solid #8393A7;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px  #ccc;
-  height:200px;
-  margin: 5%;
+  background-image: url(./images/card-bkg.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  height:300px;
 }
 
 .user-card img{
-  max-width: 60%;
+  max-width: 70%;
+  display: block;
+  box-shadow: 4px 4px #10665A;
+  margin: 0 auto 18px;
 }
 
-.user-card-inner{
+.user-card .user-card-inner{
   display:block;
   margin: 10px auto;
-  max-width: 90%; 
+  position: relative;
+  top: 44px;
+  max-width: 90%;
+  transform: rotate(-2.4deg) 
 }
 
 .todo-list{
@@ -32,21 +36,27 @@
 }
 
 .todo-list-inner{
-  margin:0 0 0 31.4%; 
+  margin:0 0 0 32.4%; 
 }
 
 .todo-button{ 
-  font-family: 'Roboto';
-  color: #3D4D65;
-  float: right;
-  position: relative;
-  left: -139px;
-  top: -24px;
-  height: 25px;
-  background-color: #EBEFF3;
-  border: 2px solid #D1335B;
-  border-radius: 4px;
+  font-family: 'Schoolbell';
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+  height: 35px;
+  background-color: #8DC98F;
+  border: 3px solid #1C9A8E;
+  border-radius: 6px;
   }
+
+.todo-item-completed{
+  color: #8DC98F;
+}
+.todo-list form{
+  margin-top: 4%;
+}
 
 .lds-hourglass {
   margin: 70px auto;
