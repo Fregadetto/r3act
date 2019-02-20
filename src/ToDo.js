@@ -51,7 +51,9 @@ class ToDo extends Component{
     return (
       <ul>
         <li>
-          {todoList}
+          <ul>
+            {todoList}
+          </ul>
           <form>
             <input 
               type="text" 
