@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -42,6 +41,14 @@ h3{
   color: #584A6C;
 
 }
+.bold-plus-light{
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #555;
+  margin:0 0 10px 0;
+
+}
+
 .italisized{
   font-size: 0.9em;
   font-family: 'Montserrat';
@@ -55,5 +62,3 @@ h3{
 .center-text{
   text-align: center;
 }
-
-

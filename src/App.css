@@ -36,7 +36,8 @@
 }
 
 .todo-list-inner{
-  margin:0 0 0 32.4%; 
+  margin:0 0 0 27.4%; 
+   color: #555;
 }
 
 .todo-button{ 
@@ -51,11 +52,21 @@
   border-radius: 6px;
   }
 
+.todo-form{ 
+  font-weight: bold;
+  font-family: 'Schoolbell';
+  background-color: #DEE7E1;
+  border: 1px solid #1C9A8E;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #555;
+  margin-top: 4%;
+  }
+
 .todo-item-completed{
   color: #8DC98F;
-}
-.todo-list form{
-  margin-top: 4%;
 }
 
 .lds-hourglass {
@@ -63,6 +74,7 @@
   width: 64px;
   height: 64px;
 }
+
 .lds-hourglass:after {
   content: " ";
   display: block;
@@ -75,6 +87,7 @@
   border-color: #ccc transparent #ccc transparent;
   animation: lds-hourglass 1.2s infinite;
 }
+
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);

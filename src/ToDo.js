@@ -45,26 +45,27 @@ class ToDo extends Component{
       dodo: ''
     }))
   }
+
   render() {
-      const todoList = this.state.todos.map(item => <ToDoItem key={item.id} item={item} handleChange = {this.handleChange}/>)
-      return (
-          <ul>
-            <li>
-            {todoList}
-              <form>
-                <input 
-                  type="text" 
-                  value={this.state.dodo} 
-                  name="dodo" 
-                  placeholder="Fyll på här..." 
-                  onChange={this.handleForm} 
-                 /><br/>
-              </form>
-            </li>
-          {this.state.dodo &&  <button className="todo-button" onClick={() => this.addTodo(this.state.dodo)}>Lägg till</button> }
-          
-          </ul>
-          )
+    const todoList = this.state.todos.map(item => <ToDoItem key={item.id} item={item} handleChange = {this.handleChange}/>)
+    return (
+      <ul>
+        <li>
+          {todoList}
+          <form>
+            <input 
+              type="text" 
+              value={this.state.dodo} 
+              name="dodo"
+              className="todo-form" 
+              placeholder="Fyll på här. . ." 
+              onChange={this.handleForm} 
+            /><br/>
+          </form>
+        </li>
+        {this.state.dodo &&  <button className="todo-button" onClick={() => this.addTodo(this.state.dodo)}>Lägg till</button> }
+      </ul>
+    )
   }
 }
 export default ToDo

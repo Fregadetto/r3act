@@ -34,13 +34,13 @@ class App extends Component {
     }
 
   render() {
-      const firstName = this.state.nameFirst
-      const firstNameEndsWithS = firstName.slice(-1) === 's' ? '' : 's'
-      return (
+    const firstName = this.state.nameFirst
+    const firstNameEndsWithS = firstName.slice(-1) === 's' ? '' : 's'
+    return (
       <div className="App center">
-      <h1>R3ACT</h1>
-      { this.state.loading ? 
-            <div className="lds-hourglass"></div> :
+        <h1>R3ACT</h1>
+        { this.state.loading ? 
+        <div className="lds-hourglass"></div> :
         <ul>
           <li className="user-card"> 
             <div className="user-card-inner"> 
@@ -48,15 +48,15 @@ class App extends Component {
               <div className="bold-plus center-text">{this.state.nameFirst} {this.state.nameLast}</div>
               <div className="italisized center-text">{this.state.login.username}</div>    
             </div> 
-        </li>
-        <li className="todo-list">
-          <div className="bold-plus center-text">{this.state.nameFirst + firstNameEndsWithS} att göra lista</div>
-          <div className="todo-list-inner"> 
-            <ToDo/>
-          </div>
-        </li>
-      </ul>}
-    </div>
+          </li>
+          <li className="todo-list">
+            <div className="bold-plus-light center-text">{this.state.nameFirst + firstNameEndsWithS} att göra lista</div>
+            <div className="todo-list-inner"> 
+              <ToDo/>
+            </div>
+          </li>
+        </ul>}
+      </div>
     );
   }
 }
